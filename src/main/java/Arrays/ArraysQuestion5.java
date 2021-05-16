@@ -8,14 +8,23 @@ public class ArraysQuestion5 {
         int num = sc.nextInt();
         System.out.println("enter elements");
         int array[] = new int[num];
+        int anotherArray[] = new int[num-1];
         for (int i = 0; i < num; i++) {
             array[i] = sc.nextInt();
         }
         System.out.println("enter the key element");
         int key = sc.nextInt();
-        System.out.println("elements are :");
-        for (int i : array) {
-            System.out.print(i + " ");
+        int j = 0;
+        System.out.println("After deleting the key");
+        for(int i: array){
+            if(i==key){
+                continue;
+            }else{
+                anotherArray[j++] = i;
+            }
+        }
+        for(int i : anotherArray){
+            System.out.println(i+" ");
         }
     }
 

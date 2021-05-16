@@ -1,5 +1,4 @@
 package main.java.Arrays;
-
 import java.util.Scanner;
 
 public class ArraysQuestion6 {
