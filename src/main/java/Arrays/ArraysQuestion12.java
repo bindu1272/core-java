@@ -1,34 +1,32 @@
 package main.java.Arrays;
-import java.util.Scanner;
 
 public class ArraysQuestion12 {
-    public static void main(String args[]) {
-        int sum = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter Size of an array");
-        int num = sc.nextInt();
-        System.out.println("enter elements");
-        int array[] = new int[num];
-        for (int i = 0; i < num; i++) {
-            array[i] = sc.nextInt();
-        }
-        System.out.println("elements are :");
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
-        int anotherArray[] = new int[num];
-        int k=0;
-        for(int i=0;i<num;i++){
-            for(int j=i+1;j<num;j++){
-                if(array[i]==array[j]){
-                    continue;
-                }else{
-                    anotherArray[k++] = array[i];
+        public static int removeDuplicateElements(int arr[], int n){
+            if (n==0 || n==1){
+                return n;
+            }
+            int[] temp = new int[n];
+            int j = 0;
+            for (int i=0; i<n-1; i++){
+                if (arr[i] != arr[i+1]){
+                    temp[j++] = arr[i];
                 }
             }
+            temp[j++] = arr[n-1];
+            // Changing original array
+            for (int i=0; i<j; i++){
+                arr[i] = temp[i];
+            }
+            return j;
         }
-        for (int i : anotherArray){
-            System.out.print(i+" ");
+
+        public static void main (String[] args) {
+            int arr[] = {10,20,20,30,30,40,50,50};
+            int length = arr.length;
+            length = removeDuplicateElements(arr, length);
+            //printing array elements
+            for (int i=0; i<length; i++)
+                System.out.print(arr[i]+" ");
         }
-    }
 }
+

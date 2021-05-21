@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class ArraysQuestion9 {
     public static void main(String args[]) {
-        int sum = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("enter Size of an array");
         int num = sc.nextInt();

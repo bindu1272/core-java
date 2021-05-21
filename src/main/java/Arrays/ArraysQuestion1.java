@@ -21,6 +21,5 @@ public class ArraysQuestion1 {
             sum = sum + i;
         }
         System.out.print(sum);
-
     }
 }
