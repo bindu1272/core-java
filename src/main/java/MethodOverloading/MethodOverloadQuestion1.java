@@ -47,6 +47,5 @@ public class MethodOverloadQuestion1 {
         getDetails("vankayalapati","bindu","binduchowdary");
         getStatus(40,"bindu");
         getStatus("bindu",60);
-
     }
 }
