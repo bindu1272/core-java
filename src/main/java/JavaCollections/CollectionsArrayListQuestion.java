@@ -19,7 +19,7 @@ public class CollectionsArrayListQuestion {
         list1.remove("grapes");//Remove an element in a list
         list1.remove(4);//Remove an element from an specific index.
         list1.set(4,"banana");//update the element by  an index
-        int  s = list1.indexOf(5);//
+        int  s = list1.indexOf(5);
         list1.get(5);//get the element at an index
         list1.size();//size of the arraylist
         list1.contains("apple");//given element present in the list or not.
